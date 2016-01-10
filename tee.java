@@ -1,12 +1,16 @@
 public class tee{
 	public static void main(String[] args){
-		/* Turtle yertle = new Turtle(0.01, 0.01, 0.0);
-		for(int i = 1; i < 6; i++){
-			yertle.drawDesign(0.05*i 3);
-			yertle.move(0.05*i, 0.05*i);
+		tris();
+	}
+	public static void tris(){
+		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
+		double dist = 0.055;
+		double len = 0.05;
+		for(int i = 1; i < 8; i++){
+			yertle.drawDesign(len*i, 3);
+			yertle.move(dist*i*Math.cos(Math.PI/3),
+				dist*i*Math.sin(Math.PI/3));
 		}
-		*/
-		corners();
 	}
 	public static void flower(){
 		Turtle yertle = new Turtle(0.5,0.5, 0.0);
