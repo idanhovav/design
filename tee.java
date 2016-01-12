@@ -25,12 +25,12 @@ public class tee{
 
 	public static void flippedArc(){
 		Turtle yertle = new Turtle(0.01, 0.5, 0.0);
-		for(int i = 0; i < 159; i++){
+		for(int i = 0; i < 174; i++){
 			yertle.turn(yertle.toAngle(150.0*(-0.45 + yertle.x)));
 			yertle.goForward(0.01);
 		}
 		yertle = new Turtle(0.01, 0.5, 0.0);
-		for(int i = 0; i < 133; i++){
+		for(int i = 0; i < 139; i++){
 			yertle.turn(yertle.toAngle(130.0*(-0.4 + yertle.x)));
 			yertle.goForward(0.01);
 		}

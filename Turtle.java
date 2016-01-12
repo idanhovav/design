@@ -82,16 +82,16 @@ public class Turtle {
             return a;
         }
         else if (a <= 580 && a > 0){
-            return 80.0 + (double) (a % 100);
+            return 80.0 + (double) (a / 100);
         }
         else if (a >= -580 && a < 0){
-            return -80 + (double) (a % 100);
+            return -80 + (double) (a / 100);
         }
-        else if (a < 0 && a >=4580){
-            return -85 + (double) (a % 1000);
+        else if (a < 0 && a >= -4580){
+            return -85 + (double) (a / 1000);
         }
         else if (a > 0 && a <= 4580){
-            return 85 + (double) (a % 1000);
+            return 85 + (double) (a / 1000);
         }
         else if (a > 0){
             return 90;
