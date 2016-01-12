@@ -11,14 +11,18 @@
 
 public class tee{
 	public static void main(String[] args){
+		eye();
+	}
+
+	public static void eye(){
 		Turtle yertle = new Turtle(0.4, 0.4, 0.0);
 		yertle.drawDesign(0.035, 20);
 		yertle.locate(0.4, 0.46);
 		yertle.drawDesign(0.025, 12);
 		arc();
 		flippedArc();
-
 	}
+
 	public static void flippedArc(){
 		Turtle yertle = new Turtle(0.01, 0.5, 0.0);
 		for(int i = 0; i < 159; i++){
@@ -31,6 +35,7 @@ public class tee{
 			yertle.goForward(0.01);
 		}
 	}
+
 	public static void arc(){
 		Turtle yertle = new Turtle(0.01, 0.5, 0.0);
 		for(int i = 0; i < 138; i++){
@@ -43,6 +48,7 @@ public class tee{
 			yertle.goForward(0.01);
 		}
 	}
+
 	public static void log(){
 		Turtle yertle = new Turtle(0.01, 0.01, 0.01);
 		double golden = (1.61803398875)*2.5;
@@ -56,6 +62,7 @@ public class tee{
 		yertle.goForward(len/golden);
 		yertle.turnLeft(90);
 	}
+
 	public static void longTri(){
 		Turtle yertle = new Turtle(0.01,0.01, 0.0);
 		double x = 0.56;
@@ -67,6 +74,7 @@ public class tee{
 		yertle.turnLeft(120.0);
 		yertle.goForward(0.02);
 	}
+
 	public static void longTriOpp(){
 		Turtle yertle = new Turtle(0.99,0.01, 180.0);
 		double x = 0.56;
@@ -78,6 +86,7 @@ public class tee{
 		yertle.turnRight(120.0);
 		yertle.goForward(0.02);
 	}
+
 	public static void shapes(){
 		Turtle yertle = new Turtle(0.4, 0.9, 0.0);
 		for(int i = 0; i < 5; i++){
@@ -85,6 +94,7 @@ public class tee{
 			yertle.move(0, (-0.1+(-0.02*i)));
 		}
 	}
+
 	public static void tris(){
 		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
 		double dist = 0.055;
@@ -95,6 +105,7 @@ public class tee{
 				dist*i*Math.sin(Math.PI/3));
 		}
 	}
+
 	public static void flower(){
 		Turtle yertle = new Turtle(0.5,0.5, 0.0);
 		int n = 8;
@@ -104,6 +115,7 @@ public class tee{
 			yertle.turnLeft(360.0/(double) n);
 		}
 	}
+
 	public static void corners(){
 		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
 		double dist = 0.08;
@@ -129,6 +141,7 @@ public class tee{
 			yertle.move(-(dist * (double) i), -(dist * (double) i));
 		}
 	}
+
 	public static void octo(){
 		Turtle yertle = new Turtle(0.01,0.01,0.0);
 		int n = 8;
