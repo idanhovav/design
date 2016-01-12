@@ -77,4 +77,27 @@ public class Turtle {
     public void turn(double a){
         this.angle = a;
     }
+    public double toAngle(double a){
+        if(a < 80 && a > -80){
+            return a;
+        }
+        else if (a <= 580 && a > 0){
+            return 80.0 + (double) (a % 100);
+        }
+        else if (a >= -580 && a < 0){
+            return -80 + (double) (a % 100);
+        }
+        else if (a < 0 && a >=4580){
+            return -85 + (double) (a % 1000);
+        }
+        else if (a > 0 && a <= 4580){
+            return 85 + (double) (a % 1000);
+        }
+        else if (a > 0){
+            return 90;
+        }
+        else{
+            return -90;
+        }
+    }
 }

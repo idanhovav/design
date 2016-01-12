@@ -1,6 +1,68 @@
+/*
+	Range of Turtle angle is -90 to 90.
+	Range of dx of graph is -infinite to infinite.
+	0 of angle == 0 of dx.
+	We need some function that approaches 90 as x
+	approaches infinite, -90 as x approaches -infinite
+	and == 0 when x = 0.
+
+
+*/
+
 public class tee{
 	public static void main(String[] args){
-		tris();
+		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
+		//yertle's y posn is x
+		//yertle's angle is dx
+		//turnLeft is d^2x
+
+		for(int i = 0; i < 100; i++){
+			yertle.goForward(0.01);
+			//yertle.turnLeft();
+			yertle.turn(yertle.toAngle(80.0*yertle.x));
+		}
+	}
+	public static void log(){
+		Turtle yertle = new Turtle(0.01, 0.01, 0.01);
+		double golden = (1.61803398875)*2.5;
+		double len = 0.98;
+		yertle.goForward(len);
+		yertle.turnLeft(90);
+		yertle.goForward(len/golden);
+		yertle.turnLeft(90);
+		yertle.goForward(len);
+		yertle.turnLeft(90);
+		yertle.goForward(len/golden);
+		yertle.turnLeft(90);
+	}
+	public static void longTri(){
+		Turtle yertle = new Turtle(0.01,0.01, 0.0);
+		double x = 0.56;
+		yertle.goForward(x);
+		yertle.turnLeft(90.0);
+		yertle.goForward(x * Math.sqrt(3));
+		yertle.turnLeft(150.0);
+		yertle.goForward(2*x);
+		yertle.turnLeft(120.0);
+		yertle.goForward(0.02);
+	}
+	public static void longTriOpp(){
+		Turtle yertle = new Turtle(0.99,0.01, 180.0);
+		double x = 0.56;
+		yertle.goForward(x);
+		yertle.turnRight(90.0);
+		yertle.goForward(x * Math.sqrt(3));
+		yertle.turnRight(150.0);
+		yertle.goForward(2*x);
+		yertle.turnRight(120.0);
+		yertle.goForward(0.02);
+	}
+	public static void shapes(){
+		Turtle yertle = new Turtle(0.4, 0.9, 0.0);
+		for(int i = 0; i < 5; i++){
+			yertle.drawDesign(0.05, 5+i);
+			yertle.move(0, (-0.1+(-0.02*i)));
+		}
 	}
 	public static void tris(){
 		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
