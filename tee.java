@@ -11,15 +11,36 @@
 
 public class tee{
 	public static void main(String[] args){
-		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
-		//yertle's y posn is x
-		//yertle's angle is dx
-		//turnLeft is d^2x
+		Turtle yertle = new Turtle(0.4, 0.4, 0.0);
+		yertle.drawDesign(0.035, 20);
+		yertle.locate(0.4, 0.46);
+		yertle.drawDesign(0.025, 12);
+		arc();
+		flippedArc();
 
-		for(int i = 0; i < 100; i++){
+	}
+	public static void flippedArc(){
+		Turtle yertle = new Turtle(0.01, 0.5, 0.0);
+		for(int i = 0; i < 138; i++){
+			yertle.turn(yertle.toAngle(150.0*(-0.45 + yertle.x)));
 			yertle.goForward(0.01);
-			//yertle.turnLeft();
-			yertle.turn(yertle.toAngle(80.0*yertle.x));
+		}
+		yertle = new Turtle(0.01, 0.5, 0.0);
+		for(int i = 0; i < 109; i++){
+			yertle.turn(yertle.toAngle(100.0*(-0.4 + yertle.x)));
+			yertle.goForward(0.01);
+		}
+	}
+	public static void arc(){
+		Turtle yertle = new Turtle(0.01, 0.5, 0.0);
+		for(int i = 0; i < 138; i++){
+			yertle.turn(yertle.toAngle(-150.0*(-0.45 + yertle.x)));
+			yertle.goForward(0.01);
+		}
+		yertle = new Turtle(0.01, 0.5, 0.0);
+		for(int i = 0; i < 109; i++){
+			yertle.turn(yertle.toAngle(-100.0*(-0.4 + yertle.x)));
+			yertle.goForward(0.01);
 		}
 	}
 	public static void log(){
