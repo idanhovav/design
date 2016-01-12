@@ -11,7 +11,17 @@
 
 public class tee{
 	public static void main(String[] args){
-		eye();
+		pillar();	
+	}
+	public static void pillar(){
+		Turtle yertle = new Turtle(0.01, 0.01, 0.0);
+		yertle.goForward(0.25);
+		yertle.turnLeft(90.0);
+		yertle.goForward(0.98);
+		yertle.turnLeft(90.0);
+		yertle.goForward(0.25);
+		yertle.turnLeft(90.0);
+		yertle.goForward(0.98);
 	}
 
 	public static void eye(){
